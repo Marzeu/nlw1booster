@@ -20,7 +20,7 @@ class PointsController {
         const serializedPoints = points.map(point => {
             return {
                 ...point,
-                image_url: `http://192.168.0.40:3333/uploads/${point.image}`,
+                image_url: `http://localhost:3333/uploads/${point.image}`
             };
         });
 
@@ -38,7 +38,7 @@ class PointsController {
 
         const serializedPoint = {
             ...point,
-            image_url: `http://192.168.0.40:3333/uploads/${point.image}`,
+            image_url: `http://localhost:3333/uploads/${point.image}`
         };
 
         const items = await knex('items')
@@ -80,23 +80,25 @@ class PointsController {
 
         const pointItems = items
             .split(',')
-            .map((item: string) => Number(item.trim()))
+            .map((item: string) => (item.trim()))
             .map((item_id: number) => {
                 return {
                     item_id,
                     point_id,
                 };
             });
+        try {
+            await trx('point_items').insert(pointItems)
 
-        await trx('point_items').insert(pointItems);
+            await trx.commit();
+        } catch (error) {
+            await trx.rollback();
 
-        await trx.commit();
+            return res.status(400).json({ message: 'Falha na inserção na tabela point_items, verifique se os items informados são válidos' })
+        }
 
-        return res.json({
-            id: point_id,
-            ...point,
-        });
-    };
-};
+        return res.json({ id: point_id, ...point, })
+    }
+}
 
 export default PointsController;

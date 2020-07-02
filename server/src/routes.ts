@@ -1,8 +1,7 @@
 import express from 'express';
-import { celebrate, Joi } from 'celebrate';
-
 import multer from 'multer';
 import multerConfig from './config/multer';
+import { celebrate, Joi } from 'celebrate';
 
 import PointsController from './controllers/PointsControllers';
 import ItemsController from './controllers/ItemsControllers';
