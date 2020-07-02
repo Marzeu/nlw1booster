@@ -7,7 +7,7 @@
 </h4>
 
 <p align="center">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Marzeu/nlw1booster">
+ <img alt="Repository size" src="https://img.shields.io/github/repo-size/Marzeu/nlw1booster">
 
   <a href="https://www.linkedin.com/in/marzeu-selau-junior-4b755410b/">
     <img alt="Made by Marzeu Selau Junior" src="https://img.shields.io/badge/made%20by-Marzeu%20Selau%20Junior-%2304D361">
@@ -16,11 +16,12 @@
   <a href="https://github.com/Marzeu/nlw1booster/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Marzeu/nlw1booster">    
   </a>
+  
+<img alt="Completed" src="https://img.shields.io/badge/Next%20Level%20Week%2001-done-7159c1"></img>
+  
+<img alt="License" src="https://img.shields.io/github/license/Marzeu/nlw1booster?color=7159c1&logoColor=000000">
 
-  <a aria-label="Completed" >
-    <img src="https://img.shields.io/badge/Next%20Level%20Week%2001-done-7159c1"></img>
-  </a>
-  <img alt="License" src="https://img.shields.io/github/license/Marzeu/nlw1booster?color=7159c1&logoColor=000000">
+</p>
 
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
